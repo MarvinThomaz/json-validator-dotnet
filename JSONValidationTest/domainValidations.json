@@ -1,0 +1,76 @@
+{
+  "Classes": [
+    {
+      "Name": "Person",
+      "Properties": [
+        {
+          "Name": "Name",
+          "Required": {
+            "Value": true,
+            "Message": "O nome da pessoa é obrigatório.",
+            "Code": 422001
+          },
+          "MaxLength": {
+            "Value": 50,
+            "Message": "O tamanho do nome não pode ultrapassar 50 caracteres.",
+            "Code": 422002
+          },
+          "MinLength": {
+            "Value": 2,
+            "Message": "O tamanho do nome tem que ter no mínimo 2 caracteres.",
+            "Code": 422003
+          }
+        },
+        {
+          "Name": "Age",
+          "Required": {
+            "Value": true,
+            "Message": "A idade da pessoa é obrigatória.",
+            "Code": 422004
+          },
+          "MaxSize": {
+            "Value": 45,
+            "Message": "A idade máxima permitida é de 45 anos.",
+            "Code": 422005
+          },
+          "MinSize": {
+            "Value": 18,
+            "Message": "A idade mínima permitida é de 18 anos.",
+            "Code": 422006
+          }
+        },
+        {
+          "Name": "Address",
+          "Required": {
+            "Value": true,
+            "Message": "O endereço do titular é obrigatório",
+            "Code": 422010
+          }
+        }
+      ]
+    },
+    {
+      "Name": "Address",
+      "Properties": [
+        {
+          "Name": "Name",
+          "Required": {
+            "Value": true,
+            "Message": "O endereço da pessoa é obrigatório.",
+            "Code": 422007
+          },
+          "MaxLength": {
+            "Value": 50,
+            "Message": "O tamanho do endereço não pode ultrapassar 50 caracteres.",
+            "Code": 422008
+          },
+          "MinLength": {
+            "Value": 2,
+            "Message": "O tamanho do endereço tem que ter no mínimo 2 caracteres.",
+            "Code": 422009
+          }
+        }
+      ]
+    }
+  ]
+}
