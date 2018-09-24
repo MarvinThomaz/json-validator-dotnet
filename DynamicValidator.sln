@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2019
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicValidator.JSON.Example", "examples\DynamicValidator.JSON.Example\DynamicValidator.JSON.Example.csproj", "{5E1C312B-C858-417E-AA90-D78BC1EA6A2D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{BB7F26A3-6FBA-4033-B917-E5206DA37B1E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "examples", "examples", "{E48E8DDF-E77F-4B22-B3D0-2D413782388D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{D327C572-54C5-449C-B4B2-BE178272008E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicValidator.JSON", "src\DynamicValidator.JSON\DynamicValidator.JSON.csproj", "{C1F8C6D7-24D2-4B6B-9781-ACA3CB3CAB9C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5E1C312B-C858-417E-AA90-D78BC1EA6A2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E1C312B-C858-417E-AA90-D78BC1EA6A2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E1C312B-C858-417E-AA90-D78BC1EA6A2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E1C312B-C858-417E-AA90-D78BC1EA6A2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1F8C6D7-24D2-4B6B-9781-ACA3CB3CAB9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1F8C6D7-24D2-4B6B-9781-ACA3CB3CAB9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1F8C6D7-24D2-4B6B-9781-ACA3CB3CAB9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1F8C6D7-24D2-4B6B-9781-ACA3CB3CAB9C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5E1C312B-C858-417E-AA90-D78BC1EA6A2D} = {E48E8DDF-E77F-4B22-B3D0-2D413782388D}
+		{C1F8C6D7-24D2-4B6B-9781-ACA3CB3CAB9C} = {BB7F26A3-6FBA-4033-B917-E5206DA37B1E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FF9DE478-D73E-408A-A3C2-5ADB847A47F8}
+	EndGlobalSection
+EndGlobal
