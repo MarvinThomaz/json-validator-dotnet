@@ -1,4 +1,4 @@
-﻿using DynamicValidator.JSON.Commands;
+﻿using DynamicValidator.JSON.Abstractions;
 using DynamicValidator.JSON.Example.Models;
 using Microsoft.AspNetCore.Mvc;
 

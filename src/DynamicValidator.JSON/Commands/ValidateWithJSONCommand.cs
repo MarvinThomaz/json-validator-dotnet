@@ -1,26 +1,36 @@
-﻿using DynamicValidator.JSON.Entities;
+﻿using DynamicValidator.JSON.Abstractions;
+using DynamicValidator.JSON.Entities;
 using DynamicValidator.JSON.Exceptions;
-using DynamicValidator.JSON.Results;
-using DynamicValidator.JSON.Types;
 using Microsoft.Extensions.Configuration;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace DynamicValidator.JSON.Commands
 {
-    public class ValidateCommand : IValidateCommand
+    /// <summary>
+    /// Classe utilizada para validar o objeto baseado em um JSON que traz todos os parametros para configuração.
+    /// </summary>
+    public class ValidateWithJSONCommand : IValidateCommand
     {
         private const string ClassValidatorSectionName = "Classes";
 
         private readonly List<ClassValidator> _validations;
         private List<ValidationResult> _errors;
 
-        public ValidateCommand(IConfiguration configuration)
+        /// <summary>
+        /// Constrói a classe solicitando o configuration da microsoft para buscar o JSON deserializado.
+        /// </summary>
+        /// <param name="configuration">Classe de configuração padrão Microsoft.</param>
+        public ValidateWithJSONCommand(IConfiguration configuration)
         {
             _validations = configuration.GetSection(ClassValidatorSectionName)
                 .Get<List<ClassValidator>>(); ;
         }
 
+        /// <summary>
+        /// Executa as validações no objeto.
+        /// </summary>
+        /// <param name="obj">Objeto que será validado</param>
         public void Execute(object obj)
         {
             _errors = new List<ValidationResult>();
@@ -78,7 +88,7 @@ namespace DynamicValidator.JSON.Commands
             }
         }
 
-        private void ExecuteValidationInProperty(string property, Validation validation, object value)
+        private void ExecuteValidationInProperty(string property, IValidation validation, object value)
         {
             var result = validation.Validate(property, value);
 

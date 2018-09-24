@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
-using DynamicValidator.JSON.Extensions;
 
 namespace DynamicValidator.JSON.Example
 {

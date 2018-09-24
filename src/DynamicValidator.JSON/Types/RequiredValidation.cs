@@ -1,19 +1,42 @@
-﻿using DynamicValidator.JSON.Extensions;
-using DynamicValidator.JSON.Results;
+﻿using DynamicValidator.JSON.Abstractions;
 using System;
 
 namespace DynamicValidator.JSON.Types
 {
-    public class RequiredValidation : Validation
+    /// <summary>
+    /// Classe que realiza validação de propriedade obrigatória.
+    /// </summary>
+    public class RequiredValidation : IValidation
     {
-        public override ValidationResult Validate(string property, object source)
+        /// <summary>
+        /// Valor que define se a propriedade será obrigatória.
+        /// </summary>
+        public object Value { get; set; }
+
+        /// <summary>
+        /// Código de erro caso a propriedade não atenda a validação.
+        /// </summary>
+        public int Code { get; set; }
+
+        /// <summary>
+        /// Mensagem de erro caso a propriedade não atenda a validação.
+        /// </summary>
+        public string Message { get; set; }
+
+        /// <summary>
+        /// Metódo que valida a propriedade.
+        /// </summary>
+        /// <param name="property">Propriedade a ser validada.</param>
+        /// <param name="source">Objeto onde o valor da propriedade será resgatado</param>
+        /// <returns>Resultado da validação</returns>
+        public ValidationResult Validate(string property, object source)
         {
             if (!Convert.ToBoolean(Value))
-                return this.FromInfo(property, true);
+                return this.ToResult(property, true);
 
             var result = (source.IsNumber() && source.ToNumber() == 0) || (source is string && string.IsNullOrEmpty(source.ToString())) || source == null;
 
-            return this.FromInfo(property, !result);
+            return this.ToResult(property, !result);
         }
     }
 }

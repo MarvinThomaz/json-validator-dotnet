@@ -1,5 +1,4 @@
 ﻿using DynamicValidator.JSON.Example.Middlewares;
-using DynamicValidator.JSON.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
