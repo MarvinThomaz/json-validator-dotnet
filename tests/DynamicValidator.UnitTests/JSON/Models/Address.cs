@@ -1,4 +1,4 @@
-﻿namespace DynamicValidator.JSON.UnitTests.Models
+﻿namespace DynamicValidator.UnitTests.JSON.Models
 {
     public class Address
     {

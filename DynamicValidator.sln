@@ -17,9 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicValidator.Abstractio
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicValidator.Extensions", "src\DynamicValidator.Extensions\DynamicValidator.Extensions.csproj", "{E24FF7DC-3632-48C4-B9C6-9E8663E17B1F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicValidator.Exceptions", "src\DynamicValidator.Exceptions\DynamicValidator.Exceptions.csproj", "{57E47B95-BCDC-4E8F-B257-1247639A5923}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicValidator.Exceptions", "src\DynamicValidator.Exceptions\DynamicValidator.Exceptions.csproj", "{57E47B95-BCDC-4E8F-B257-1247639A5923}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicValidator.JSON.UnitTests", "tests\DynamicValidator.JSON.UnitTests\DynamicValidator.JSON.UnitTests.csproj", "{1EE1E581-6F9E-48C9-9260-9111086D3EFB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicValidator.UnitTests", "tests\DynamicValidator.UnitTests\DynamicValidator.UnitTests.csproj", "{1EE1E581-6F9E-48C9-9260-9111086D3EFB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

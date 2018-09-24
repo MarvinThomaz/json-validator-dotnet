@@ -3,12 +3,12 @@ using DynamicValidator.Exceptions;
 using DynamicValidator.JSON.Commands;
 using DynamicValidator.JSON.Entities;
 using DynamicValidator.JSON.Types;
-using DynamicValidator.JSON.UnitTests.Models;
+using DynamicValidator.UnitTests.JSON.Models;
 using System.Collections.Generic;
 using System.Linq;
 using Xunit;
 
-namespace DynamicValidator.JSON.UnitTests.Commands
+namespace DynamicValidator.UnitTests.JSON.Commands
 {
     public class ValidateWithJSONCommandTests
     {
