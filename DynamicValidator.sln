@@ -21,6 +21,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicValidator.Exceptions
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DynamicValidator.UnitTests", "tests\DynamicValidator.UnitTests\DynamicValidator.UnitTests.csproj", "{1EE1E581-6F9E-48C9-9260-9111086D3EFB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicValidator.Attributes", "src\DynamicValidator.Attributes\DynamicValidator.Attributes.csproj", "{AA10BAAA-D558-4B59-BA88-11B65BCF6ADD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{1EE1E581-6F9E-48C9-9260-9111086D3EFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1EE1E581-6F9E-48C9-9260-9111086D3EFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1EE1E581-6F9E-48C9-9260-9111086D3EFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA10BAAA-D558-4B59-BA88-11B65BCF6ADD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA10BAAA-D558-4B59-BA88-11B65BCF6ADD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA10BAAA-D558-4B59-BA88-11B65BCF6ADD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA10BAAA-D558-4B59-BA88-11B65BCF6ADD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,6 +68,7 @@ Global
 		{E24FF7DC-3632-48C4-B9C6-9E8663E17B1F} = {BB7F26A3-6FBA-4033-B917-E5206DA37B1E}
 		{57E47B95-BCDC-4E8F-B257-1247639A5923} = {BB7F26A3-6FBA-4033-B917-E5206DA37B1E}
 		{1EE1E581-6F9E-48C9-9260-9111086D3EFB} = {D327C572-54C5-449C-B4B2-BE178272008E}
+		{AA10BAAA-D558-4B59-BA88-11B65BCF6ADD} = {BB7F26A3-6FBA-4033-B917-E5206DA37B1E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FF9DE478-D73E-408A-A3C2-5ADB847A47F8}
