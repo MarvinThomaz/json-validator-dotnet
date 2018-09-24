@@ -3,6 +3,7 @@ using DynamicValidator.JSON.Exceptions;
 using DynamicValidator.JSON.Results;
 using DynamicValidator.JSON.Types;
 using Microsoft.Extensions.Configuration;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -10,29 +11,34 @@ namespace DynamicValidator.JSON.Services
 {
     public class ValidatorApplicationService : IValidatorApplicationService
     {
-        private readonly IConfiguration _configuration;
+        private readonly List<ClassValidator> _validations;
 
         public ValidatorApplicationService(IConfiguration configuration)
         {
-            _configuration = configuration;
+            _validations = configuration.GetSection("Classes").Get<List<ClassValidator>>(); ;
         }
 
         public void Validate<T>(T obj)
         {
-            var validations = _configuration.GetSection("Classes").Get<List<ClassValidator>>();
-            var validation = validations.FirstOrDefault(v => v.Name == typeof(T).Name);
             var errors = new List<ValidationResult>();
+
+            Validate(typeof(T), obj, errors);
+        }
+
+        private void Validate(Type type, object obj, List<ValidationResult> errors)
+        {
+            var validation = _validations.FirstOrDefault(v => v.Name == type.Name);
 
             if (validation != null)
             {
                 ValidateAllProperties(errors, validation.Properties, obj);
             }
-            
+
             if (errors?.Count() > 0)
                 throw new ValidationException(errors);
         }
 
-        private void ValidateAllProperties<T>(List<ValidationResult> errors, List<PropertyValidator> properties, T obj)
+        private void ValidateAllProperties(List<ValidationResult> errors, List<PropertyValidator> properties, object obj)
         {
             foreach (var property in properties)
             {
@@ -40,12 +46,20 @@ namespace DynamicValidator.JSON.Services
             }
         }
 
-        private void ValidateProperty<T>(List<ValidationResult> errors, PropertyValidator property, T obj)
+        private void ValidateProperty(List<ValidationResult> errors, PropertyValidator property, object obj)
         {
-            var objProperty = typeof(T).GetProperty(property.Name);
+            var objProperty = obj.GetType().GetProperty(property.Name);
             var value = objProperty.GetValue(obj);
 
-            ValidateAll(property.Name, errors, value, property.Required, property.MaxLength, property.MinLength, property.MaxSize, property.MinSize);
+            if (_validations?.Any(v => v.Name == property.Name) == true)
+            {
+                ValidateAll(property.Name, errors, value, property.Required, property.MaxLength, property.MinLength, property.MaxSize, property.MinSize);
+                Validate(value.GetType(), value, errors);
+            }
+            else
+            {
+                ValidateAll(property.Name, errors, value, property.Required, property.MaxLength, property.MinLength, property.MaxSize, property.MinSize);
+            }
         }
 
         private void ValidateAll(string property, List<ValidationResult> errors, object value, params Validation[] validations)
