@@ -1,5 +1,5 @@
-﻿using DynamicValidator.JSON.Example.Models;
-using DynamicValidator.JSON.Services;
+﻿using DynamicValidator.JSON.Commands;
+using DynamicValidator.JSON.Example.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DynamicValidator.JSON.Example.Controllers
@@ -8,17 +8,17 @@ namespace DynamicValidator.JSON.Example.Controllers
     [ApiController]
     public class PersonsController : ControllerBase
     {
-        private readonly IValidatorApplicationService _validationService;
+        private readonly IValidateCommand _validator;
 
-        public PersonsController(IValidatorApplicationService service)
+        public PersonsController(IValidateCommand service)
         {
-            _validationService = service;
+            _validator = service;
         }
 
         [HttpPost]
         public ActionResult Post(Person person)
         {
-            _validationService.Validate(person);
+            _validator.Execute(person);
 
             return Ok(person);
         }
