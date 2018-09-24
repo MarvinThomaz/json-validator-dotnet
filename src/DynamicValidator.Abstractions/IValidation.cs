@@ -1,4 +1,4 @@
-﻿namespace DynamicValidator.JSON.Abstractions
+﻿namespace DynamicValidator.Abstractions
 {
     /// <summary>
     /// Interface que baseada em informações basicas de uma propriedade adiciona propriedades de validação.

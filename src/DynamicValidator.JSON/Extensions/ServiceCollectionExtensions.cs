@@ -1,4 +1,4 @@
-﻿using DynamicValidator.JSON.Abstractions;
+﻿using DynamicValidator.Abstractions;
 using DynamicValidator.JSON.Commands;
 
 namespace Microsoft.Extensions.DependencyInjection

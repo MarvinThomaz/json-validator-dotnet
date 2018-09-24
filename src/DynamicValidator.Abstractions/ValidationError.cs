@@ -1,6 +1,4 @@
-﻿using DynamicValidator.JSON.Abstractions;
-
-namespace DynamicValidator.JSON.Abstractions
+﻿namespace DynamicValidator.Abstractions
 {
     /// <summary>
     /// Classe de resultado de validação focada em erros.

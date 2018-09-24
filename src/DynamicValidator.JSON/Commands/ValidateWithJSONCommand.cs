@@ -1,4 +1,4 @@
-﻿using DynamicValidator.JSON.Abstractions;
+﻿using DynamicValidator.Abstractions;
 using DynamicValidator.JSON.Entities;
 using DynamicValidator.JSON.Exceptions;
 using Microsoft.Extensions.Configuration;

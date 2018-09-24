@@ -1,4 +1,4 @@
-﻿using DynamicValidator.JSON.Abstractions;
+﻿using DynamicValidator.Abstractions;
 using DynamicValidator.JSON.Types;
 using System.Collections.Generic;
 using System.Linq;

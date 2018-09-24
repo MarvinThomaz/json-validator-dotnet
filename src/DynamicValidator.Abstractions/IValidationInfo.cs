@@ -1,4 +1,4 @@
-﻿namespace DynamicValidator.JSON.Abstractions
+﻿namespace DynamicValidator.Abstractions
 {
     /// <summary>
     /// Interface de resultado de validações.

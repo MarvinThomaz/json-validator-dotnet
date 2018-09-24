@@ -1,4 +1,4 @@
-﻿namespace DynamicValidator.JSON.Abstractions
+﻿namespace DynamicValidator.Abstractions
 {
     /// <summary>
     /// Comando usado para executar validações em uma determinada entidade.
