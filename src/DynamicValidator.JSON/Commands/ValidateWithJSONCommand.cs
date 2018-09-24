@@ -1,6 +1,6 @@
 ﻿using DynamicValidator.Abstractions;
+using DynamicValidator.Exceptions;
 using DynamicValidator.JSON.Entities;
-using DynamicValidator.JSON.Exceptions;
 using Microsoft.Extensions.Configuration;
 using System.Collections.Generic;
 using System.Linq;

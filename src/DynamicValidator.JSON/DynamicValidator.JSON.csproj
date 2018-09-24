@@ -13,7 +13,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\DynamicValidator.Exceptions\DynamicValidator.Exceptions.csproj" />
     <ProjectReference Include="..\DynamicValidator.Abstractions\DynamicValidator.Abstractions.csproj" />
+    <ProjectReference Include="..\DynamicValidator.Extensions\DynamicValidator.Extensions.csproj" />
   </ItemGroup>
 
 </Project>

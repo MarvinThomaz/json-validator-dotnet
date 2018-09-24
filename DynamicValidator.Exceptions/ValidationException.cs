@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace DynamicValidator.JSON.Exceptions
+namespace DynamicValidator.Exceptions
 {
     /// <summary>
     /// Excessão que é utilizada no momento em que validações não passaram.

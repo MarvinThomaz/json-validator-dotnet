@@ -1,6 +1,4 @@
-﻿using DynamicValidator.Abstractions;
-
-namespace DynamicValidator.Abstractions
+﻿namespace DynamicValidator.Abstractions
 {
     /// <summary>
     /// Método utilizado para disponibilizar extensões para o <see cref="IValidationInfo"/>.

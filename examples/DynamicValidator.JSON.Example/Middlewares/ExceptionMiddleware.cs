@@ -1,4 +1,4 @@
-﻿using DynamicValidator.JSON.Exceptions;
+﻿using DynamicValidator.Exceptions;
 using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
 using System;
