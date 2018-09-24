@@ -8,10 +8,22 @@ namespace DynamicValidator.JSON.Types
     /// </summary>
     public class MaxSizeValidation : IValidation
     {
+        private int _value;
+
         /// <summary>
         /// Valor que define o valor máximo
         /// </summary>
-        public object Value { get; set; }
+        public object Value
+        {
+            get
+            {
+                return _value;
+            }
+            set
+            {
+                _value = (int)value.ToNumber();
+            }
+        }
 
         /// <summary>
         /// Valor que define o código de erro caso o valor máximo seja ultrapassado.
@@ -31,7 +43,7 @@ namespace DynamicValidator.JSON.Types
         /// <returns>Resultado da validação</returns>
         public ValidationResult Validate(string property, object source)
         {
-            var result = source.ToNumber() > Convert.ToInt32(Value);
+            var result = source.ToNumber() > _value;
 
             return this.ToResult(property, !result);
         }

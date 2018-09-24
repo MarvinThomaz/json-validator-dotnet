@@ -8,10 +8,22 @@ namespace DynamicValidator.JSON.Types
     /// </summary>
     public class MaxLengthValidation : IValidation
     {
+        private int _value;
+
         /// <summary>
         /// Valor que define o tamanho máximo da propriedade.
         /// </summary>
-        public object Value { get; set; }
+        public object Value
+        {
+            get
+            {
+                return _value;
+            }
+            set
+            {
+                _value = (int)value.ToNumber();
+            }
+        }
 
         /// <summary>
         /// Código de erro a ser aplicado caso o tamanho máximo seja ultrapassado.
@@ -33,7 +45,7 @@ namespace DynamicValidator.JSON.Types
         {
             if (source is string)
             {
-                var result = (source as string).Length > Convert.ToInt32(Value);
+                var result = source.ToString()?.Length > _value;
 
                 return this.ToResult(property, !result);
             }

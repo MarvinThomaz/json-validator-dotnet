@@ -8,10 +8,22 @@ namespace DynamicValidator.JSON.Types
     /// </summary>
     public class RequiredValidation : IValidation
     {
+        private bool _value;
+
         /// <summary>
         /// Valor que define se a propriedade será obrigatória.
         /// </summary>
-        public object Value { get; set; }
+        public object Value
+        {
+            get
+            {
+                return _value;
+            }
+            set
+            {
+                _value = Convert.ToBoolean(value);
+            }
+        }
 
         /// <summary>
         /// Código de erro caso a propriedade não atenda a validação.
@@ -31,7 +43,7 @@ namespace DynamicValidator.JSON.Types
         /// <returns>Resultado da validação</returns>
         public ValidationResult Validate(string property, object source)
         {
-            if (!Convert.ToBoolean(Value))
+            if (!_value)
                 return this.ToResult(property, true);
 
             var result = (source.IsNumber() && source.ToNumber() == 0) || (source is string && string.IsNullOrEmpty(source.ToString())) || source == null;

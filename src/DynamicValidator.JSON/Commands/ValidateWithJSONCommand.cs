@@ -23,8 +23,14 @@ namespace DynamicValidator.JSON.Commands
         /// <param name="configuration">Classe de configuração padrão Microsoft.</param>
         public ValidateWithJSONCommand(IConfiguration configuration)
         {
-            _validations = configuration.GetSection(ClassValidatorSectionName)
-                .Get<List<ClassValidator>>(); ;
+            var section = configuration.GetSection(ClassValidatorSectionName);
+
+            _validations = section.Get<List<ClassValidator>>(); ;
+        }
+
+        public ValidateWithJSONCommand(List<ClassValidator> validations)
+        {
+            _validations = validations;
         }
 
         /// <summary>
