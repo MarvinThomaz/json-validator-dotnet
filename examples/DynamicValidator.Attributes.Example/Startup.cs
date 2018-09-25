@@ -1,11 +1,11 @@
-﻿using DynamicValidator.JSON.Example.Middlewares;
+﻿using DynamicValidator.Attributes.Example.Middlewares;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace DynamicValidator.JSON.Example
+namespace DynamicValidator.Attributes.Example
 {
     public class Startup
     {
@@ -18,7 +18,7 @@ namespace DynamicValidator.JSON.Example
         
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddJsonValidation();
+            services.AddAttributesValidation();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
         

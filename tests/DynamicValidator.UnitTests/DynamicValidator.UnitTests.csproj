@@ -18,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\DynamicValidator.Abstractions\DynamicValidator.Abstractions.csproj" />
+    <ProjectReference Include="..\..\src\DynamicValidator.Attributes\DynamicValidator.Attributes.csproj" />
     <ProjectReference Include="..\..\src\DynamicValidator.JSON\DynamicValidator.JSON.csproj" />
   </ItemGroup>
 

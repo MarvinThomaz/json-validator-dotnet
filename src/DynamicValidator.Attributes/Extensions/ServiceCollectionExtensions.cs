@@ -1,5 +1,5 @@
 ﻿using DynamicValidator.Abstractions;
-using DynamicValidator.JSON.Commands;
+using DynamicValidator.Attributes.Commands;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
@@ -12,9 +12,9 @@ namespace Microsoft.Extensions.DependencyInjection
         /// Método utilizado para adicionar as dependencias de validação ao service collection da aplicação.
         /// </summary>
         /// <param name="services">Service collection da aplicação.</param>
-        public static void AddJsonValidation(this IServiceCollection services)
+        public static void AddAttributesValidation(this IServiceCollection services)
         {
-            services.AddScoped<IValidateCommand, ValidateWithJSONCommand>();
+            services.AddScoped<IValidateCommand, ValidateWithAttributesCommand>();
         }
     }
 }
